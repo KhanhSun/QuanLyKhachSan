@@ -1,5 +1,13 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
 
-/.vs
+.vs/QuanLyKhachSan/FileContentIndex/bb3eba85-ba9a-43de-ac05-0e37bb15e141.vsidx
+.vs/QuanLyKhachSan/v17/.suo
+QuanLyKhachSanATD/.vs/ProjectEvaluation/quanlykhachsanatd.metadata.v7.bin
+QuanLyKhachSanATD/.vs/ProjectEvaluation/quanlykhachsanatd.projects.v7.bin
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/DesignTimeBuild/.dtbcache.v2
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/FileContentIndex/398d8122-b1c2-4528-a3f3-8e048e8228d7.vsidx
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/FileContentIndex/6a564433-ffa8-458c-86e9-57d15ba7aa23.vsidx
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/FileContentIndex/b69ce80e-4272-46b4-8a26-e23d0e59aac5.vsidx
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/FileContentIndex/c6a66876-27ff-406d-a616-e0ee46a39f09.vsidx
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/FileContentIndex/f05ed16a-9cf3-45bd-be14-240c51db8f52.vsidx
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/v17/.futdcache.v2
+QuanLyKhachSanATD/.vs/QuanLyKhachSanATD/v17/.suo
