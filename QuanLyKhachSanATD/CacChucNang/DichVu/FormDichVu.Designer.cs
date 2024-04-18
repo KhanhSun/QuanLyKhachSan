@@ -45,12 +45,12 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.White;
+            pictureBox1.BackColor = SystemColors.ButtonShadow;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Image = QuanLyKhachSanATD.Properties.Resources.hoyoverse_logo_42473;
-            pictureBox1.Location = new Point(81, 64);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(112, -81);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(424, 332);
+            pictureBox1.Size = new Size(587, 595);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;

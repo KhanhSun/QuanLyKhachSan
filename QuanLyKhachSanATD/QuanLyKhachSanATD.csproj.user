@@ -19,5 +19,8 @@
     <Compile Update="MainForm\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

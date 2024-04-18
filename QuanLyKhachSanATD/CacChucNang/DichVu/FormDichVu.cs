@@ -24,7 +24,8 @@ namespace QuanLyKhachSan.DichVu
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            this.BackColor = Color.Blue;
+            this.TransparencyKey = Color.Blue;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

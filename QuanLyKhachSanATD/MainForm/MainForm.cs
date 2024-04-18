@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyKhachSan.DichVu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace QuanLyKhachSanATD.MainForm
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormDichVu DV2 = new FormDichVu();
+            DV2.Show();
         }
     }
 }
