@@ -21,3 +21,7 @@ QuanLyKhachSanATD/bin/Debug/net8.0-windows/QuanLyKhachSanATD.dll
 QuanLyKhachSanATD/bin/Debug/net8.0-windows/QuanLyKhachSanATD.exe
 QuanLyKhachSanATD/bin/Debug/net8.0-windows/QuanLyKhachSanATD.pdb
 QuanLyKhachSanATD/bin/Debug/net8.0-windows/QuanLyKhachSanATD.dll
+*.dll
+QuanLyKhachSanATD/bin/Debug/net8.0-windows/QuanLyKhachSanATD.dll
+/QuanLyKhachSanATD/bin
+/QuanLyKhachSanATD/obj
