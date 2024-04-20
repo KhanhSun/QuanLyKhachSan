@@ -10,7 +10,7 @@
     <Compile Update="CacChucNang\QLKH\Form_QLKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LoginForm\Form-DK.cs">
+    <Compile Update="CacChucNang\QLPhong\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LoginForm\Form-DN.cs">
