@@ -1,22 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="CacChucNang\DichVu\FormDichVu.cs">
+    <Compile Update="GUI\Chức năng.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CacChucNang\DichVu\test.cs">
+    <Compile Update="GUI\Danh sách nhân viên.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CacChucNang\QLKH\Form_QLKH.cs">
+    <Compile Update="GUI\Form-DN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CacChucNang\QLPhong\Form1.cs">
+    <Compile Update="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LoginForm\Form-DN.cs">
+    <Compile Update="GUI\Form_QLKH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MainForm\MainForm.cs">
+    <Compile Update="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Quyền Truy Cập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Thông tin nhân viên.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Tài khoản nhân viên.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="StartScreen.cs">
