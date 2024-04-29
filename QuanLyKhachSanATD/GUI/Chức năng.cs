@@ -16,5 +16,12 @@ namespace QLNV
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Thông_tin_nhân_viên form = new Thông_tin_nhân_viên();
+            form.Show();
+            this.Hide();
+        }
     }
 }

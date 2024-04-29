@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
             button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,34 +51,16 @@
             groupBox1.Size = new Size(602, 362);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Chức năng";
+            groupBox1.Text = "Chức năng quản lí nhân viên";
             // 
-            // button1
+            // button5
             // 
-            button1.Location = new Point(53, 68);
-            button1.Name = "button1";
-            button1.Size = new Size(242, 50);
-            button1.TabIndex = 0;
-            button1.Text = "Cập Nhật Nhân Viên";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(346, 174);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 50);
-            button2.TabIndex = 1;
-            button2.Text = "Quyền Truy Cập";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(346, 68);
-            button3.Name = "button3";
-            button3.Size = new Size(200, 50);
-            button3.TabIndex = 2;
-            button3.Text = "Thêm Nhân Viên";
-            button3.UseVisualStyleBackColor = true;
+            button5.Location = new Point(53, 275);
+            button5.Name = "button5";
+            button5.Size = new Size(200, 50);
+            button5.TabIndex = 4;
+            button5.Text = "Đóng";
+            button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -89,14 +71,33 @@
             button4.Text = "Đặt Lại Mật Khẩu";
             button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button3
             // 
-            button5.Location = new Point(53, 275);
-            button5.Name = "button5";
-            button5.Size = new Size(200, 50);
-            button5.TabIndex = 4;
-            button5.Text = "Đóng";
-            button5.UseVisualStyleBackColor = true;
+            button3.Location = new Point(346, 68);
+            button3.Name = "button3";
+            button3.Size = new Size(200, 50);
+            button3.TabIndex = 2;
+            button3.Text = "Thêm Nhân Viên";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(346, 174);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 50);
+            button2.TabIndex = 1;
+            button2.Text = "Quyền Truy Cập";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(53, 68);
+            button1.Name = "button1";
+            button1.Size = new Size(242, 50);
+            button1.TabIndex = 0;
+            button1.Text = "Cập Nhật Nhân Viên";
+            button1.UseVisualStyleBackColor = true;
             // 
             // Chức_năng
             // 

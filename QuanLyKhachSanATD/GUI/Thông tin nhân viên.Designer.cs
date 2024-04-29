@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            textBox5 = new TextBox();
+            label8 = new Label();
+            comboBox2 = new ComboBox();
+            label7 = new Label();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
             comboBox1 = new ComboBox();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
@@ -38,17 +44,22 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            textBox6 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(comboBox1);
             groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
@@ -60,12 +71,60 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = Color.DodgerBlue;
-            groupBox1.Location = new Point(31, 25);
+            groupBox1.Location = new Point(37, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(625, 354);
+            groupBox1.Size = new Size(687, 415);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(209, 364);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(335, 38);
+            textBox5.TabIndex = 15;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(59, 51);
+            label8.Name = "label8";
+            label8.Size = new Size(89, 31);
+            label8.TabIndex = 14;
+            label8.Text = "Mã NV:";
+            // 
+            // comboBox2
+            // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(209, 319);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(233, 39);
+            comboBox2.TabIndex = 13;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(53, 328);
+            label7.Name = "label7";
+            label7.Size = new Size(129, 31);
+            label7.TabIndex = 12;
+            label7.Text = "Chức danh:";
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(209, 275);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(233, 38);
+            textBox4.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(209, 227);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(233, 38);
+            textBox3.TabIndex = 10;
             // 
             // comboBox1
             // 
@@ -114,9 +173,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(53, 186);
             label4.Name = "label4";
-            label4.Size = new Size(121, 31);
+            label4.Size = new Size(75, 31);
             label4.TabIndex = 3;
-            label4.Text = "Ngày sinh:";
+            label4.Text = "Email:";
             // 
             // label3
             // 
@@ -130,7 +189,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(53, 95);
+            label2.Location = new Point(56, 371);
             label2.Name = "label2";
             label2.Size = new Size(118, 31);
             label2.TabIndex = 1;
@@ -139,40 +198,63 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(53, 51);
+            label1.Location = new Point(59, 95);
             label1.Name = "label1";
-            label1.Size = new Size(54, 31);
+            label1.Size = new Size(91, 31);
             label1.TabIndex = 0;
-            label1.Text = "Tên:";
+            label1.Text = "Tên NV:";
             // 
-            // dateTimePicker1
+            // button1
             // 
-            dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.Location = new Point(209, 179);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 38);
-            dateTimePicker1.TabIndex = 9;
+            button1.BackColor = Color.DodgerBlue;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(276, 433);
+            button1.Name = "button1";
+            button1.Size = new Size(100, 51);
+            button1.TabIndex = 1;
+            button1.Text = "Thêm";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // textBox3
+            // button2
             // 
-            textBox3.Location = new Point(212, 231);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(233, 38);
-            textBox3.TabIndex = 10;
+            button2.BackColor = Color.DodgerBlue;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(385, 433);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 48);
+            button2.TabIndex = 2;
+            button2.Text = "Xóa";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // textBox4
+            // button3
             // 
-            textBox4.Location = new Point(209, 275);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(233, 38);
-            textBox4.TabIndex = 11;
+            button3.BackColor = Color.DodgerBlue;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(487, 433);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 48);
+            button3.TabIndex = 3;
+            button3.Text = "Thoát";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(209, 179);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(335, 38);
+            textBox6.TabIndex = 16;
             // 
             // Thông_tin_nhân_viên
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(858, 507);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(groupBox1);
             Name = "Thông_tin_nhân_viên";
             Text = "Thông_tin_nhân_viên";
@@ -195,6 +277,13 @@
         private TextBox textBox1;
         private TextBox textBox4;
         private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Label label7;
+        private ComboBox comboBox2;
+        private TextBox textBox5;
+        private Label label8;
+        private TextBox textBox6;
     }
 }
