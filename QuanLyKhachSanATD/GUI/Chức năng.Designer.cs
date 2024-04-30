@@ -39,6 +39,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.Chartreuse;
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button3);
@@ -55,54 +56,60 @@
             // 
             // button5
             // 
+            button5.BackColor = Color.Lavender;
             button5.Location = new Point(53, 275);
             button5.Name = "button5";
             button5.Size = new Size(200, 50);
             button5.TabIndex = 4;
             button5.Text = "Đóng";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            button4.BackColor = Color.Lavender;
             button4.Location = new Point(53, 174);
             button4.Name = "button4";
             button4.Size = new Size(242, 50);
             button4.TabIndex = 3;
             button4.Text = "Đặt Lại Mật Khẩu";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            button3.BackColor = Color.Lavender;
             button3.Location = new Point(346, 68);
             button3.Name = "button3";
             button3.Size = new Size(200, 50);
             button3.TabIndex = 2;
             button3.Text = "Thêm Nhân Viên";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.Lavender;
             button2.Location = new Point(346, 174);
             button2.Name = "button2";
             button2.Size = new Size(200, 50);
             button2.TabIndex = 1;
             button2.Text = "Quyền Truy Cập";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
+            button1.BackColor = Color.Lavender;
             button1.Location = new Point(53, 68);
             button1.Name = "button1";
             button1.Size = new Size(242, 50);
             button1.TabIndex = 0;
             button1.Text = "Cập Nhật Nhân Viên";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // Chức_năng
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Aquamarine;
             ClientSize = new Size(800, 450);
             Controls.Add(groupBox1);
             Name = "Chức_năng";

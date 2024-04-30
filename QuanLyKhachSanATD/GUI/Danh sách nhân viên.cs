@@ -7,11 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QLNV
 {
     public partial class Danh_sách_nhân_viên : Form
     {
+        SqlConnection connection;
+        SqlCommand command;
+        string str = @"Data Source=LAPTOP-KQQI16KN\DUONG123;Initial Catalog=QL_NVBH;Integrated Security=True;Encrypt=False";
+        sqlDataAdapter adapter = new sqlDataAdapter();
+        DataTable table = new DataTable();
+        void loaddata()
+        {
+            command = connection.CreateCommand();
+            command.CommandText = "select * form QLNV";
+            command.SelectComand = command;
+            table.Clear();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
+        }
+        private void Danh_sách_nhân_viên_Load(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(str);
+            connection.Open();
+            loaddata();
+        }
         public Danh_sách_nhân_viên()
         {
             InitializeComponent();
@@ -46,7 +67,7 @@ namespace QLNV
             colNumberPhone.Width = 100;
             colDiachi.Width = 150;
 
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colOrganization,colTen, colLoai, colCMND, colNumberPhone , colDiachi });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colOrganization, colTen, colLoai, colCMND, colNumberPhone, colDiachi });
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -60,6 +81,37 @@ namespace QLNV
         {
             CreateColumnForDataGridView();
             LoadListDSNV();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Thông_tin_nhân_viên form = new Thông_tin_nhân_viên();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Thông_tin_nhân_viên form = new Thông_tin_nhân_viên();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Thông_tin_nhân_viên form = new Thông_tin_nhân_viên();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

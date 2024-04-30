@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.SqlClient;
 
 namespace QLNV
 {
@@ -17,7 +18,25 @@ namespace QLNV
         {
             InitializeComponent();
         }
-
+        private SqlConnection conn;
+        public void connect()
+        {
+            //Lấy chuỗi kết nối CSDL
+            string strcon = "Data Source="điền của m vào dùm"; Initial Catalog=QLHOCSINH; User ID=sa;Password = sa";
+            try
+            {
+                conn = new SqlConnection(strcon);
+                // Mở kết nối
+                conn.Open();
+                //Ko làm gì thì đóng kết nối lại
+                conn.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Không kết nối được CSDL", "Thông báo",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
             comboBox1.Items.Add("Nam");
