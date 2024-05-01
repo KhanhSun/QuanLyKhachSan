@@ -16,13 +16,13 @@ namespace QLNV
         SqlConnection connection;
         SqlCommand command;
         string str = @"Data Source=LAPTOP-KQQI16KN\DUONG123;Initial Catalog=QL_NVBH;Integrated Security=True;Encrypt=False";
-        sqlDataAdapter adapter = new sqlDataAdapter();
+        SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
         {
             command = connection.CreateCommand();
             command.CommandText = "select * form QLNV";
-            command.SelectComand = command;
+            //command.SelectComand = command;
             table.Clear();
             adapter.Fill(table);
             dataGridView1.DataSource = table;
@@ -77,11 +77,6 @@ namespace QLNV
         {
             dataGridView1.DataSource = ListDSNV.Instance.ListnumberDSNV;
         }
-        private void Danh_sách_nhân_viên_Load(object sender, EventArgs e)
-        {
-            CreateColumnForDataGridView();
-            LoadListDSNV();
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -112,6 +107,12 @@ namespace QLNV
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Danh_sách_nhân_viên_Load_1(object sender, EventArgs e)
+        {
+            CreateColumnForDataGridView();
+            LoadListDSNV();
         }
     }
 }

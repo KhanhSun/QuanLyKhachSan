@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraSpreadsheet.Model;
-using QuanLyKhachSanATD.DAL;
+﻿using QuanLyKhachSanATD.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +8,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSanATD.GUI
@@ -18,6 +16,7 @@ namespace QuanLyKhachSanATD.GUI
     {
         ConnectionDB sun = new ConnectionDB();
         string query = "";
+        int error = 0;
         public DatPhong()
         {
             InitializeComponent();
@@ -56,24 +55,50 @@ namespace QuanLyKhachSanATD.GUI
         }
         int rid;
         private void Rnum_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Service.Items.Clear();
+        { 
             query = "select TenDichVu from DichVu";
             setcombobox(query, Service);
         }
         private void Service_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String DVchoice = Service.Text;
-            query = "select GiaPhong, roomid from LoaiPhong where MaPhong = '" + Rnum.Text + "'";
-            DataSet dn = sun.getData(query);
-            query = "select TienDichVu from DichVu where TenDichVu = N'" + DVchoice + "'";
-            DataSet sv = sun.getData(query);
-            // hỏi thầy
-            int sum = int.Parse(s: dn.Tables[0].Rows[0][0].ToString()) + int.Parse(sv.Tables[0].Rows[0][0].ToString());
+            if (error != 0)
+            {
+                return;
+            }
+            else
+            {
+                query = "select GiaPhong, roomid from LoaiPhong where MaPhong = '" + Rnum.Text + "'";
+                DataSet dn = sun.getData(query);
+                String query2 = "select TienDichVu, TenDichVu from DichVu where TenDichVu = N'" + Service.Text+ "'";
+                DataSet sv = sun.getData(query2);
+                if (dn.Tables.Count > 0 && dn.Tables[0].Rows.Count > 0)
+                {
+                    MessageBox.Show("dn Co du lieu nha");
+                }
+                else
+                {
+                    MessageBox.Show("dn không Có du lieu nha");
+                }
+                if (sv.Tables.Count > 0 && sv.Tables[0].Rows.Count > 0)
+                {
+                    MessageBox.Show("sv Co du lieu nha");
+                }
+                else
+                {
+                    MessageBox.Show("sv không Có du lieu nha");
+                }
+                // hỏi thầy
+                int sum1 = int.Parse(s: dn.Tables[0].Rows[0][0].ToString());
 
-            total.Text = sum.ToString();
-            rid = int.Parse(dn.Tables[0].Rows[0][1].ToString());
+                int sum2 = int.Parse(sv.Tables[0].Rows[0][0].ToString());
+                int sum = sum1 + sum2;
+                total.Text = sum.ToString();
+                rid = int.Parse(dn.Tables[0].Rows[0][1].ToString());
+                error++;
+            }
+            
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (ten.Text != "" && sdt.Text != "" && quoctich.Text != "" && gender.Text != "" && dob.Text != "" && madinhdanh.Text != "" && diachi.Text != "" && checkinday.Text != "" && total.Text != "")
@@ -87,15 +112,16 @@ namespace QuanLyKhachSanATD.GUI
                 String dc = diachi.Text;
                 String checkin = checkinday.Text;
                 String rservice = Service.Text;
+                String Alltotal = total.Text;
                 if (rservice == "")
                 {
-                    query = "insert into DatPhong (cname, mobile, quoctich, gioitinh, ngaysinh, maDN, diachi, checkin,rservice, roomid) values (N'" + name + "'," + mobile + ",'" + nation + "','" + gioitinh + "','" + ngaysinh + "','" + idf + "',N'" + dc + "','" + checkin + "', NULL ," + rid + ") update LoaiPhong set TinhTrangPhong = 'YES' where roomid = '" + rid + "'";
+                    query = "INSERT INTO DatPhong (cname, mobile, quoctich, gioitinh, ngaysinh, maDN, diachi, checkin,rservice, roomid,allcost) values (N'" + name + "'," + mobile + ",'" + nation + "','" + gioitinh + "','" + ngaysinh + "','" + idf + "',N'" + dc + "','" + checkin + "', NULL ," + rid + "," + Alltotal + ") update LoaiPhong set TinhTrangPhong = 'YES' where roomid = '" + rid + "'";
                     sun.setData(query, "Số phòng " + Rnum.Text + " đặt phòng thành công.");
                     clearAll();
                 }
                 else
                 {
-                    query = "insert into DatPhong (cname, mobile, quoctich, gioitinh, ngaysinh, maDN, diachi, checkin,rservice, roomid) values (N'" + name + "'," + mobile + ",'" + nation + "','" + gioitinh + "','" + ngaysinh + "','" + idf + "',N'" + dc + "','" + checkin + "',N'" + rservice + "'," + rid + ") update LoaiPhong set TinhTrangPhong = 'YES' where roomid = '" + rid + "'";
+                    query = "INSERT INTO DatPhong (cname, mobile, quoctich, gioitinh, ngaysinh, maDN, diachi, checkin,rservice, roomid,allcost) values (N'" + name + "'," + mobile + ",'" + nation + "','" + gioitinh + "','" + ngaysinh + "','" + idf + "',N'" + dc + "','" + checkin + "',N'" + rservice + "'," + rid + "," + Alltotal + ") update LoaiPhong set TinhTrangPhong = 'YES' where roomid = '" + rid + "'";
                     sun.setData(query, "Số phòng " + Rnum.Text + " đặt phòng thành công.");
                     clearAll();
                 }
@@ -122,6 +148,7 @@ namespace QuanLyKhachSanATD.GUI
             Service.SelectedIndex = -1;
             Rnum.Items.Clear();
             total.Clear();
+            error--;
         }
 
         private void sdt_TextChanged(object sender, EventArgs e)
@@ -141,6 +168,11 @@ namespace QuanLyKhachSanATD.GUI
 
         private void dob_ValueChanged(object sender, EventArgs e)
         {
+        }
+
+        private void total_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -36,10 +36,10 @@
             dataGridView1 = new DataGridView();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            textBox1 = new TextBox();
             textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -138,15 +138,21 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Tìm kiếm nhân viên";
             // 
-            // label1
+            // textBox2
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 28);
-            label1.TabIndex = 6;
-            label1.Text = "Mã NV:";
+            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(405, 38);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(266, 34);
+            textBox2.TabIndex = 9;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(137, 41);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 34);
+            textBox1.TabIndex = 8;
             // 
             // label2
             // 
@@ -158,21 +164,15 @@
             label2.TabIndex = 7;
             label2.Text = "Tên NV:";
             // 
-            // textBox1
+            // label1
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(137, 41);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 34);
-            textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(405, 38);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(266, 34);
-            textBox2.TabIndex = 9;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(39, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 28);
+            label1.TabIndex = 6;
+            label1.Text = "Mã NV:";
             // 
             // Danh_sách_nhân_viên
             // 
@@ -188,6 +188,7 @@
             Controls.Add(button1);
             Name = "Danh_sách_nhân_viên";
             Text = "Danh_sách_nhân_viên";
+            Load += Danh_sách_nhân_viên_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);

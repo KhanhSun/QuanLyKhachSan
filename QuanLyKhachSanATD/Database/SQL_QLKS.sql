@@ -87,9 +87,11 @@ ngaysinh nvarchar(100)not null,
 maDN nvarchar(100) not null,
 diachi nvarchar(100) not null,
 checkin nvarchar(100) not null,
-checkout nvarchar(100) default ('No'),
+chekout nvarchar(20) default('Null'),
+checkout nvarchar(20) default ('No'),
 rservice nvarchar(100) default (N'Không'),
 roomid int not null,
+allcost int not null,
 foreign key ([roomid]) references [dbo].[LoaiPhong] ([roomid])
 )
 
@@ -145,7 +147,7 @@ VALUES
  (N'Trang trí phòng', 2000000),
  (N'Thuê tập gym, Giặt ủi, Dọn Phòng', 3500000),
   (N'Giặt ủi, Dọn Phòng', 500000)
-
+  select TienDichVu, TenDichVu from DichVu where TenDichVu = N'Dọn Phòng'
 INSERT INTO QLKhachHang (MaKH, TenKH, GioiTinhKH, EmailKH, SDTKH, QuocTich, CCCD)
 VALUES
   ('KH00001', N'Nguyễn Văn A', N'Nam', N'a.nguyen@gmail.com', 127432789, N'Việt Nam', '123243245'),
@@ -201,7 +203,7 @@ VALUES
   ('108', N'Phòng đôi', N'Giường đôi',800000),
   ('109', N'Phòng VIP', N'Giường cao cấp',1200000)
 
-INSERT INTO DatPhong (cname, mobile, quoctich, gioitinh, ngaysinh, maDN, diachi, checkin,rservice, roomid)
+INSERT INTO DatPhong (cname, mobile, quoctich, gioitinh, ngaysinh, maDN, diachi, checkin,rservice, roomid,allcost)
 VALUES
   ('John Doe', 1234567890, 'American', 'Nam', '1990-01-01', '1876543456', N'Quận 3, Hồ Chí Minh', '2024-04-30',N'Giặt ủi', 1),
   ('Jane Doe', 9876543210, 'British', 'Nữ', '1995-05-20', '9876545678', N'QUận 7, Hồ Chí Minh', '2024-04-29',NULL, 2)
@@ -218,3 +220,6 @@ VALUES
   (N'Dọn phòng',N'Cẩn thận đồ dễ vở', 'KH00001', '101'),
   (N'Thuê tập gym',N'Không có', 'KH00002', '102'),
   (N'Giặt, Ủi',N'Đò mỏng dễ bung chỉ', 'KH00003', '103')
+
+update LoaiPhong set TinhTrangPhong ='No'
+select DatPhong.cid, DatPhong.cname, DatPhong.mobile, DatPhong.quoctich, DatPhong.gioitinh, DatPhong.ngaysinh, DatPhong.maDN, DatPhong.diachi, DatPhong.checkin,DatPhong.rservice, LoaiPhong.MaPhong,  LoaiPhong.TenLoaiPhong,DatPhong.allcost from DatPhong inner join LoaiPhong on DatPhong.roomid = LoaiPhong.roomid where checkout = 'No';

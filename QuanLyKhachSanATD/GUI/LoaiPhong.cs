@@ -50,7 +50,7 @@ namespace QuanLyKhachSanATD.GUI
                 String bed = Bedtype.Text;
                 Int64 price = Int64.Parse(textBox1.Text);
 
-                query = "insert into LoaiPhong (MaPhong, TenLoaiPhong, LoaiGiuong,GiaPhong) values ('" + roomno + "','" + type + "','" + bed + "'," + price + ")";
+                query = @"insert into LoaiPhong (MaPhong, TenLoaiPhong, LoaiGiuong,GiaPhong) values ('" + roomno + "',N'" + type + "',N'" + bed + "'," + price + ")";
                 sun.setData(query, "Đã thêm phòng");
 
                 LoaiPhong_Load_1(this, null);

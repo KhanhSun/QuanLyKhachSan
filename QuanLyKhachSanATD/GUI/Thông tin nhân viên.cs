@@ -22,7 +22,7 @@ namespace QLNV
         public void connect()
         {
             //Lấy chuỗi kết nối CSDL
-            string strcon = "Data Source="điền của m vào dùm"; Initial Catalog=QLHOCSINH; User ID=sa;Password = sa";
+            string strcon = @"Data Source=""; Initial Catalog=QLHOCSINH; User ID=sa;Password = sa";
             try
             {
                 conn = new SqlConnection(strcon);
@@ -58,7 +58,7 @@ namespace QLNV
             {
                 conn.Open();
                 string str = "insert into QlNhanVien VALUES('" + MaNV + "',N'" + TenNV + "'," + GioiTinh + "," + SDT + ",N'" + Email + "'," + CCCD + ",N'" + DiaChi + "',N'" + ChucDanh + "')";
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Thêm dữ liệu thành công!");
             }

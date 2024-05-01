@@ -1,4 +1,4 @@
-﻿using DevExpress.XtraRichEdit.Layout;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;

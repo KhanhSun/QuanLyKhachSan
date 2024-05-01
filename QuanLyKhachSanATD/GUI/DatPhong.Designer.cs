@@ -313,6 +313,7 @@
             total.ReadOnly = true;
             total.Size = new Size(258, 30);
             total.TabIndex = 26;
+            total.TextChanged += total_TextChanged;
             // 
             // label14
             // 

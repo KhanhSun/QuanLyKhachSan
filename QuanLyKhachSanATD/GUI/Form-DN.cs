@@ -1,7 +1,4 @@
-﻿using DevExpress.Data.Extensions;
-using DevExpress.Utils;
-using DevExpress.Xpo.DB.Helpers;
-using QuanLyKhachSanATD.DTO;
+﻿using QuanLyKhachSanATD.DTO;
 using QuanLyKhachSanATD.MainForm;
 using System;
 using System.Collections.Generic;

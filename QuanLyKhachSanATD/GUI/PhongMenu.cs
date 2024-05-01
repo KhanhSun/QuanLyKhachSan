@@ -19,9 +19,9 @@ namespace QuanLyKhachSanATD.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoaiPhong lp = new LoaiPhong ();
+            LoaiPhong dp = new LoaiPhong ();
             this.Close ();
-            lp.Show();
+            dp.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -33,7 +33,9 @@ namespace QuanLyKhachSanATD.GUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            ThanhToanPhong dp = new ThanhToanPhong();
+            this.Close();
+            dp.Show();
         }
     }
 }

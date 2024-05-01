@@ -1,6 +1,4 @@
-﻿using DevExpress.Xpo.DB.Helpers;
-using DevExpress.XtraSpreadsheet.Import.Xls;
-using QuanLyKhachSanATD.DAL;
+﻿using QuanLyKhachSanATD.DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +9,6 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace QuanLyKhachSanATD.GUI
