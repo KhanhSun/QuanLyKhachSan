@@ -7,6 +7,12 @@
     <Compile Update="GUI\Danh sách nhân viên.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\DatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\DichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Form-DN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -19,7 +25,19 @@
     <Compile Update="GUI\Form_QLKH.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\LoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\PhongMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Ql_KyThuat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Quyền Truy Cập.cs">

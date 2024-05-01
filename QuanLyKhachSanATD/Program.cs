@@ -1,3 +1,5 @@
+using QuanLyKhachSanATD.MainForm;
+
 namespace QuanLyKhachSanATD
 {
     internal static class Program

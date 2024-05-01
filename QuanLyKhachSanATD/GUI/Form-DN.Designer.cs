@@ -35,6 +35,7 @@
             UserText = new TextBox();
             PassText = new TextBox();
             btDN = new Button();
+            ExitBTN = new Button();
             SuspendLayout();
             // 
             // Dangnhap
@@ -99,12 +100,26 @@
             btDN.UseVisualStyleBackColor = true;
             btDN.Click += btDN_Click;
             // 
+            // ExitBTN
+            // 
+            ExitBTN.FlatAppearance.BorderSize = 0;
+            ExitBTN.FlatStyle = FlatStyle.Flat;
+            ExitBTN.Font = new Font("Arial", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ExitBTN.Location = new Point(551, 1);
+            ExitBTN.Name = "ExitBTN";
+            ExitBTN.Size = new Size(40, 41);
+            ExitBTN.TabIndex = 6;
+            ExitBTN.Text = "X";
+            ExitBTN.UseVisualStyleBackColor = true;
+            ExitBTN.Click += ExitBTN_Click;
+            // 
             // Form_DN
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(593, 346);
+            Controls.Add(ExitBTN);
             Controls.Add(btDN);
             Controls.Add(PassText);
             Controls.Add(UserText);
@@ -132,5 +147,6 @@
         private System.Windows.Forms.TextBox UserText;
         private System.Windows.Forms.TextBox PassText;
         private System.Windows.Forms.Button btDN;
+        private Button ExitBTN;
     }
 }
