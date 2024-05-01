@@ -70,6 +70,7 @@
             button1.TabIndex = 9;
             button1.Text = "Tìm kiếm";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox4
             // 
@@ -146,7 +147,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(groupBox1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Tìm kiếm nhân viên";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);

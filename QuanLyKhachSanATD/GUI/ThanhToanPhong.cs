@@ -16,5 +16,10 @@ namespace QuanLyKhachSanATD.GUI
         {
             InitializeComponent();
         }
+
+        private void ThanhToanPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,6 +19,9 @@
     <Compile Update="GUI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Form_DatMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Form_NhaBep.cs">
       <SubType>Form</SubType>
     </Compile>

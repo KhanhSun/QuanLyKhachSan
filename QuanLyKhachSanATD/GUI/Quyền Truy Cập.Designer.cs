@@ -36,12 +36,9 @@
             comboBox1 = new ComboBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            groupBox3 = new GroupBox();
             listBox1 = new ListBox();
+            button6 = new Button();
+            groupBox3 = new GroupBox();
             listBox2 = new ListBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -50,6 +47,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.Aqua;
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button2);
@@ -69,47 +67,55 @@
             // 
             // button4
             // 
+            button4.BackColor = Color.Yellow;
             button4.Location = new Point(588, 95);
             button4.Margin = new Padding(4);
             button4.Name = "button4";
             button4.Size = new Size(260, 59);
             button4.TabIndex = 5;
             button4.Text = "Đóng";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.Yellow;
             button3.Location = new Point(588, 32);
             button3.Margin = new Padding(4);
             button3.Name = "button3";
             button3.Size = new Size(260, 59);
             button3.TabIndex = 4;
             button3.Text = "Thêm mới";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.Yellow;
             button2.Location = new Point(319, 91);
             button2.Margin = new Padding(4);
             button2.Name = "button2";
             button2.Size = new Size(260, 59);
             button2.TabIndex = 3;
             button2.Text = "Xóa";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
+            button1.BackColor = Color.Yellow;
             button1.Location = new Point(319, 32);
             button1.Margin = new Padding(4);
             button1.Name = "button1";
             button1.Size = new Size(260, 59);
             button1.TabIndex = 1;
             button1.Text = "Sửa tên";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // comboBox1
             // 
+            comboBox1.BackColor = Color.White;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(8, 95);
             comboBox1.Margin = new Padding(4);
@@ -130,6 +136,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.BackColor = Color.Aquamarine;
             groupBox2.Controls.Add(listBox1);
             groupBox2.ForeColor = Color.DodgerBlue;
             groupBox2.Location = new Point(40, 216);
@@ -141,59 +148,9 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Quyền hiện tại";
             // 
-            // button5
-            // 
-            button5.ForeColor = Color.DodgerBlue;
-            button5.Location = new Point(431, 294);
-            button5.Name = "button5";
-            button5.Size = new Size(72, 41);
-            button5.TabIndex = 2;
-            button5.Text = "<<";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            button6.ForeColor = Color.DodgerBlue;
-            button6.Location = new Point(431, 531);
-            button6.Name = "button6";
-            button6.Size = new Size(72, 41);
-            button6.TabIndex = 3;
-            button6.Text = ">>";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.ForeColor = Color.DodgerBlue;
-            button7.Location = new Point(431, 469);
-            button7.Name = "button7";
-            button7.Size = new Size(72, 41);
-            button7.TabIndex = 4;
-            button7.Text = ">";
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.ForeColor = Color.DodgerBlue;
-            button8.Location = new Point(431, 363);
-            button8.Name = "button8";
-            button8.Size = new Size(72, 41);
-            button8.TabIndex = 5;
-            button8.Text = "<";
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            groupBox3.Controls.Add(listBox2);
-            groupBox3.ForeColor = Color.DodgerBlue;
-            groupBox3.Location = new Point(528, 216);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(360, 367);
-            groupBox3.TabIndex = 6;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Các quyền còn lại";
-            // 
             // listBox1
             // 
+            listBox1.BackColor = Color.Turquoise;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 28;
             listBox1.Items.AddRange(new object[] { "Đặt Phòng", "Nhận Phòng", "Sử dụng dịch vụ và Thanh toán", "Thống kê và doanh thu", "Quản lí phòng", "Quản lí nhân viên", "Quản lí khách hàng", "Quản lí hóa đơn", "Quản lí dịch vụ", "Quy định" });
@@ -202,9 +159,35 @@
             listBox1.Size = new Size(274, 284);
             listBox1.TabIndex = 0;
             listBox1.Tag = "";
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.SpringGreen;
+            button6.ForeColor = Color.DodgerBlue;
+            button6.Location = new Point(408, 388);
+            button6.Name = "button6";
+            button6.Size = new Size(114, 54);
+            button6.TabIndex = 3;
+            button6.Text = ">>";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
+            // groupBox3
+            // 
+            groupBox3.BackColor = Color.DarkSeaGreen;
+            groupBox3.Controls.Add(listBox2);
+            groupBox3.ForeColor = Color.DodgerBlue;
+            groupBox3.Location = new Point(528, 216);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(360, 367);
+            groupBox3.TabIndex = 6;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Phân công nhiệm vụ";
             // 
             // listBox2
             // 
+            listBox2.BackColor = Color.YellowGreen;
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 28;
             listBox2.Location = new Point(22, 53);
@@ -216,15 +199,14 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.BlanchedAlmond;
             ClientSize = new Size(1100, 630);
             Controls.Add(groupBox3);
-            Controls.Add(button8);
-            Controls.Add(button7);
             Controls.Add(button6);
-            Controls.Add(button5);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ForeColor = SystemColors.ControlLightLight;
             Margin = new Padding(4);
             Name = "Quyền_Truy_Cập";
             Text = "Quyền_Truy_Cập";
@@ -245,10 +227,7 @@
         private Button button2;
         private Button button1;
         private GroupBox groupBox2;
-        private Button button5;
         private Button button6;
-        private Button button7;
-        private Button button8;
         private GroupBox groupBox3;
         private ListBox listBox1;
         private ListBox listBox2;

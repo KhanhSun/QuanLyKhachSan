@@ -8,20 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNV
+namespace QuanLyKhachSanATD.GUI
 {
-    public partial class Chức_năng : Form
+    public partial class Form_DatMon : Form
     {
-        public Chức_năng()
+        public Form_DatMon()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Thông_tin_nhân_viên form = new Thông_tin_nhân_viên();
-            form.Show();
-            this.Hide();
+
         }
     }
 }
