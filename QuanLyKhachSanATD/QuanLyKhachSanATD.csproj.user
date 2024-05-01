@@ -43,6 +43,9 @@
     <Compile Update="GUI\Quyền Truy Cập.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\ThanhToanPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GUI\Thông tin nhân viên.cs">
       <SubType>Form</SubType>
     </Compile>
