@@ -13,6 +13,8 @@ namespace QLNV
 {
     public partial class Danh_sách_nhân_viên : Form
     {
+        ConnectionDB sun = new ConnectionDB();
+        string query = "";
         SqlConnection connection;
         SqlCommand command;
         string str = @"Data Source=LAPTOP-KQQI16KN\DUONG123;Initial Catalog=QL_NVBH;Integrated Security=True;Encrypt=False";
