@@ -210,6 +210,7 @@
             Margin = new Padding(4);
             Name = "Quyền_Truy_Cập";
             Text = "Quyền_Truy_Cập";
+            Load += Quyền_Truy_Cập_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);

@@ -83,5 +83,10 @@ namespace QLNV
             dic.Add(tl, tgv);
             listBox2.Items.Add($"{tgv} đảm nhận nhiệm vụ {tl} ");
         }
+
+        private void Quyền_Truy_Cập_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

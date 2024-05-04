@@ -32,13 +32,10 @@
             button2 = new Button();
             button3 = new Button();
             button5 = new Button();
-            button6 = new Button();
             dataGridView1 = new DataGridView();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            textBox2 = new TextBox();
             textBox1 = new TextBox();
-            label2 = new Label();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
@@ -70,7 +67,7 @@
             // button3
             // 
             button3.ForeColor = Color.Blue;
-            button3.Location = new Point(423, 505);
+            button3.Location = new Point(410, 505);
             button3.Name = "button3";
             button3.Size = new Size(94, 51);
             button3.TabIndex = 2;
@@ -88,18 +85,6 @@
             button5.Text = "Hủy";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.PeachPuff;
-            button6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.Location = new Point(263, 93);
-            button6.Name = "button6";
-            button6.Size = new Size(144, 36);
-            button6.TabIndex = 5;
-            button6.Text = "Tìm kiếm";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
             // 
             // dataGridView1
             // 
@@ -125,11 +110,8 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(textBox2);
             groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(button6);
             groupBox2.ForeColor = Color.Chocolate;
             groupBox2.Location = new Point(47, 31);
             groupBox2.Name = "groupBox2";
@@ -138,37 +120,20 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Tìm kiếm nhân viên";
             // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(405, 38);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(266, 34);
-            textBox2.TabIndex = 9;
-            // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(137, 41);
+            textBox1.Location = new Point(153, 55);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 34);
+            textBox1.Size = new Size(240, 34);
             textBox1.TabIndex = 8;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(322, 41);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 28);
-            label2.TabIndex = 7;
-            label2.Text = "Tên NV:";
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(39, 47);
+            label1.Location = new Point(47, 61);
             label1.Name = "label1";
             label1.Size = new Size(76, 28);
             label1.TabIndex = 6;
@@ -202,13 +167,10 @@
         private Button button2;
         private Button button3;
         private Button button5;
-        private Button button6;
         private DataGridView dataGridView1;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private TextBox textBox2;
         private TextBox textBox1;
-        private Label label2;
         private Label label1;
     }
 }

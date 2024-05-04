@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QuanLyKhachSanATD.DAL;
+using QuanLyKhachSanATD.DTO;
+using System.Threading.Tasks.Sources;
 
 namespace QLNV
 {
@@ -17,13 +20,12 @@ namespace QLNV
         string query = "";
         SqlConnection connection;
         SqlCommand command;
-        string str = @"Data Source=LAPTOP-KQQI16KN\DUONG123;Initial Catalog=QL_NVBH;Integrated Security=True;Encrypt=False";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void loaddata()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * form QLNV";
+            command.CommandText = "select * form QLNhanVien";
             //command.SelectComand = command;
             table.Clear();
             adapter.Fill(table);
@@ -31,7 +33,7 @@ namespace QLNV
         }
         private void Danh_sách_nhân_viên_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(str);
+            connection = new SqlConnection(query);
             connection.Open();
             loaddata();
         }
@@ -89,9 +91,20 @@ namespace QLNV
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Thông_tin_nhân_viên form = new Thông_tin_nhân_viên();
-            form.Show();
-            this.Hide();
+            string query= "UPDATE QLNhanVien SET MaNV=N'"+QLNhanVien.MaNV+ "',TenNV =N'"+QLNhanVien.TenNV+"',GioiTinh=N'"+QLNhanVien.GioiTinh+"',SDT="+QLNhanVien.SDT+",Email=N'"+QLNhanVien.Email+"',CCCD="+QLNhanVien.CCCD+",DiaChi=N'"+QLNhanVien.DiaChi+"',ChucDanh=N'"QLNhanVien.ChucDanh + "'";
+            try
+            {
+                if(MessageBox.Show("Bạn có muốn sửa không?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Information)== DialogResult.Yes)
+                {
+                    Modify.Command(query);
+                    MessageBox.Show("Sua thanh cong !!");
+                    Danh_sách_nhân_viên_Load(sender, e);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Loi sua:" + ex.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -116,5 +129,19 @@ namespace QLNV
             CreateColumnForDataGridView();
             LoadListDSNV();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string name = textBox1.Text.Trim();
+            if(name=="") {
+                Danh_sách_nhân_viên_Load(sender, e);
+            }
+            else
+            {
+                string query = "Select * from QLNhanVien Where MaNV ='" + name + "'";
+                dataGridView1.DataSource = Modify.table(query);
+            }
+        }
     }
 }
+    
