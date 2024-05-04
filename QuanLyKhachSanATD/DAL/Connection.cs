@@ -11,7 +11,7 @@ namespace QuanLyKhachSanATD.DAL
 {
     class ConnectionDB
     {
-        private static string strConn = @"Data Source=SUNCE\SUNCE;Database=QLKS;Trusted_Connection=True;";
+        private static string strConn = @"Data Source=DESKTOP-I7E37RP;Database=QLKS;Trusted_Connection=True;";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(strConn);

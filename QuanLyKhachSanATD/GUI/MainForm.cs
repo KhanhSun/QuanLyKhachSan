@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using QLNV;
 using QuanLyKhachSan.Form_DK_DN;
 using QuanLyKhachSanATD.GUI;
+using QuanLyKhachSan.QLKH;
 
 namespace QuanLyKhachSanATD.MainForm
 {
@@ -63,7 +64,8 @@ namespace QuanLyKhachSanATD.MainForm
 
         private void KHBTN_Click(object sender, EventArgs e)
         {
-
+            Form_QLKH kh= new Form_QLKH();
+            kh.Show();
         }
 
         private void DTBTN_Click(object sender, EventArgs e)
