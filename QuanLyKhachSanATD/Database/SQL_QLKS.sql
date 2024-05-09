@@ -203,6 +203,7 @@ VALUES
   ('108', N'Phòng đôi', N'Giường đôi',800000),
   ('109', N'Phòng VIP', N'Giường cao cấp',1200000)
 
+  select kh.MaKH, kh.TenKH, kh.GioiTinhKH, kh.EmailKH, kh.SDTKH, kh.QuocTich, kh.CCCD From QLKhachHang kh
 INSERT INTO DatPhong (cname, mobile, quoctich, gioitinh, ngaysinh, maDN, diachi, checkin,rservice, roomid,allcost)
 VALUES
   ('John Doe', 1234567890, 'American', 'Nam', '1990-01-01', '1876543456', N'Quận 3, Hồ Chí Minh', '2024-04-30',N'Giặt ủi', 1),

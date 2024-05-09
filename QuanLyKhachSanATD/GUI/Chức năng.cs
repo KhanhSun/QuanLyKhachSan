@@ -23,5 +23,26 @@ namespace QLNV
             form.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Danh_sách_nhân_viên form = new Danh_sách_nhân_viên();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Quyền_Truy_Cập form = new Quyền_Truy_Cập();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Danh_sách_nhân_viên form = new Danh_sách_nhân_viên();
+            form.Show();
+            this.Hide();
+        }
     }
 }

@@ -71,8 +71,9 @@
             button4.Name = "button4";
             button4.Size = new Size(242, 50);
             button4.TabIndex = 3;
-            button4.Text = "Đặt Lại Mật Khẩu";
+            button4.Text = "Tìm Kiếm Nhân Viên";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -94,6 +95,7 @@
             button2.TabIndex = 1;
             button2.Text = "Quyền Truy Cập";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -102,8 +104,9 @@
             button1.Name = "button1";
             button1.Size = new Size(242, 50);
             button1.TabIndex = 0;
-            button1.Text = "Cập Nhật Nhân Viên";
+            button1.Text = "Danh Sách Nhân Viên";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // Chức_năng
             // 

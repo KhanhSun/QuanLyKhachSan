@@ -9,11 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Data.SqlClient;
+using QuanLyKhachSanATD.DAL;
 
 namespace QLNV
 {
     public partial class Thông_tin_nhân_viên : Form
     {
+        string connectstring = string.Empty;
+
+        ConnectionDB sun = new ConnectionDB();
+        string query = "";
+        SqlConnection connection;
+        SqlCommand command;
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        DataTable table = new DataTable();
+        private void Thông_tin_nhân_viên_Load(object sender, EventArgs e)
+        {
+            connection = new SqlConnection(connectstring);
+            connection.Open();
+        }
         public Thông_tin_nhân_viên()
         {
             InitializeComponent();
@@ -46,23 +60,23 @@ namespace QLNV
         int SDT, CCCD;
         private void button1_Click(object sender, EventArgs e)
         {
-            MaNV= textBox1.Text;
-            TenNV= textBox2.Text;
-            Email= textBox6.Text;
-            DiaChi=textBox4.Text;
-            GioiTinh= comboBox1.SelectedValue.ToString();
+            MaNV = textBox1.Text;
+            TenNV = textBox2.Text;
+            Email = textBox6.Text;
+            DiaChi = textBox4.Text;
+            GioiTinh = comboBox1.SelectedValue.ToString();
             ChucDanh = comboBox2.SelectedValue.ToString();
-            SDT= Convert.ToInt16(textBox3.Text);
-            CCCD= Convert.ToInt16(textBox5.Text);
+            SDT = Convert.ToInt16(textBox3.Text);
+            CCCD = Convert.ToInt16(textBox5.Text);
             try
             {
                 conn.Open();
-                string str = "insert into QlNhanVien VALUES('" + MaNV + "',N'" + TenNV + "'," + GioiTinh + "," + SDT + ",N'" + Email + "'," + CCCD + ",N'" + DiaChi + "',N'" + ChucDanh + "')";
+                string str = "insert into QLNhanVien VALUES('" + MaNV + "',N'" + TenNV + "'," + GioiTinh + "," + SDT + ",N'" + Email + "'," + CCCD + ",N'" + DiaChi + "',N'" + ChucDanh + "')";
                 //cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Thêm dữ liệu thành công!");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Thêm dữ liệu bị lỗi" + ex.ToString());
             }
@@ -70,15 +84,33 @@ namespace QLNV
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = string.Empty; // Clear txtA
-            textBox2.Text = string.Empty; // Clear txtB
-            textBox3.Text = string.Empty; // Clear txtC
-            textBox1.Focus();
+            command.Connection.CreateCommand();
+            command.CommandText = "delete form QLNhanVien where MaNV = '" + textBox1.Text + "'";
+            command.ExecuteNonQuery();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            command.Connection.CreateCommand();
+            command.CommandText = "update form QLNhanVien where TenNV = '" + textBox2.Text + "',GioiTinh ='" + comboBox1.Text + "',Email='" + textBox3.Text + "',SDT = " + textBox4.Text + ",DiaChi = '" + textBox5.Text + "',ChucDanh = '" + comboBox2.Text + "',SoCMND = " + textBox6.Text + "";
+            command.ExecuteNonQuery();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            comboBox1.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            comboBox2.Text = "";
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            textBox6 = new TextBox();
             textBox5 = new TextBox();
             label8 = new Label();
             comboBox2 = new ComboBox();
@@ -47,7 +48,8 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            textBox6 = new TextBox();
+            button4 = new Button();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,6 +79,13 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(209, 179);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(335, 38);
+            textBox6.TabIndex = 16;
             // 
             // textBox5
             // 
@@ -232,7 +241,7 @@
             // 
             button3.BackColor = Color.DodgerBlue;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(487, 433);
+            button3.Location = new Point(685, 434);
             button3.Name = "button3";
             button3.Size = new Size(94, 48);
             button3.TabIndex = 3;
@@ -240,18 +249,37 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
-            // textBox6
+            // button4
             // 
-            textBox6.Location = new Point(209, 179);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(335, 38);
-            textBox6.TabIndex = 16;
+            button4.BackColor = Color.DodgerBlue;
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(485, 434);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 48);
+            button4.TabIndex = 4;
+            button4.Text = "Sửa";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.DodgerBlue;
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(585, 434);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 48);
+            button5.TabIndex = 5;
+            button5.Text = "Khởi tạo";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // Thông_tin_nhân_viên
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(858, 507);
+            Controls.Add(button5);
+            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -285,5 +313,7 @@
         private TextBox textBox5;
         private Label label8;
         private TextBox textBox6;
+        private Button button4;
+        private Button button5;
     }
 }
