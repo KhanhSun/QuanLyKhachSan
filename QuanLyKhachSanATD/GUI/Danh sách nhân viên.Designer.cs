@@ -37,6 +37,7 @@
             groupBox2 = new GroupBox();
             textBox1 = new TextBox();
             label1 = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -139,12 +140,24 @@
             label1.TabIndex = 6;
             label1.Text = "Mã NV:";
             // 
+            // button4
+            // 
+            button4.ForeColor = Color.Blue;
+            button4.Location = new Point(94, 505);
+            button4.Name = "button4";
+            button4.Size = new Size(94, 51);
+            button4.TabIndex = 9;
+            button4.Text = "Mở";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Danh_sách_nhân_viên
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Beige;
             ClientSize = new Size(841, 583);
+            Controls.Add(button4);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(button5);
@@ -153,7 +166,6 @@
             Controls.Add(button1);
             Name = "Danh_sách_nhân_viên";
             Text = "Danh_sách_nhân_viên";
-            Load += Danh_sách_nhân_viên_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
@@ -172,5 +184,6 @@
         private GroupBox groupBox2;
         private TextBox textBox1;
         private Label label1;
+        private Button button4;
     }
 }
