@@ -22,7 +22,8 @@ namespace QuanLyKhachSanATD.GUI
 
         private void ThanhToanPhong_Load(object sender, EventArgs? e)
         {
-            query = "select DatPhong.cid, DatPhong.cname, DatPhong.mobile, DatPhong.quoctich, DatPhong.gioitinh, DatPhong.ngaysinh, DatPhong.maDN, DatPhong.diachi, DatPhong.checkin,DatPhong.rservice, LoaiPhong.MaPhong,  LoaiPhong.TenLoaiPhong,DatPhong.allcost from DatPhong inner join LoaiPhong on DatPhong.roomid = LoaiPhong.roomid where checkout = 'No'; ";
+            TTdg.RowHeadersVisible = false;
+            query = "select DatPhong.roomid, DatPhong.cid, DatPhong.cname, DatPhong.mobile, DatPhong.quoctich, DatPhong.gioitinh, DatPhong.ngaysinh, DatPhong.maDN, DatPhong.diachi, DatPhong.checkin,DatPhong.rservice, LoaiPhong.MaPhong,  LoaiPhong.TenLoaiPhong,DatPhong.allcost from DatPhong inner join LoaiPhong on DatPhong.roomid = LoaiPhong.roomid where checkout = 'No'; ";
             DataSet ds = sun.getData(query);
             TTdg.DataSource = ds.Tables[0];
         }
@@ -40,12 +41,13 @@ namespace QuanLyKhachSanATD.GUI
         }
         int id;
         private void TTdg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
         {
             if (TTdg.Rows[e.RowIndex].Cells[e.RowIndex] != null)
             {
-                id = int.Parse(TTdg.Rows[e.RowIndex].Cells[0].Value.ToString());
-                nametxt.Text = TTdg.Rows[e.RowIndex].Cells[1].Value.ToString();
-                roomnotxt.Text = TTdg.Rows[e.RowIndex].Cells[2].Value.ToString();
+                id = int.Parse(TTdg.Rows[e.RowIndex].Cells[1].Value.ToString());
+                nametxt.Text = TTdg.Rows[e.RowIndex].Cells[2].Value.ToString();
+                roomnotxt.Text = TTdg.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
         }
 
@@ -56,7 +58,7 @@ namespace QuanLyKhachSanATD.GUI
                 if (MessageBox.Show("Chắc chắn chưa ?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     String cdate = paydtp.Text;
-                    query = @"update DatPhong set checkout = 'Yes', chekout = '" + cdate + "' where cid = " + id + " update LoaiPhong set TinhTrangPhong = 'No' where MaPhong = '" + roomnotxt.Text + "'";
+                    query = @"update DatPhong set checkout = 'Yes', chekout = '" + cdate + "' where cid = " + id + " update LoaiPhong set TinhTrangPhong = 'No' where roomid = '" + roomnotxt.Text + "'";
                     sun.setData(query, "Thanh toán thành công!");
                     ThanhToanPhong_Load(this, null);
                     clearAll();

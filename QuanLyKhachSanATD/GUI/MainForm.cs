@@ -43,6 +43,7 @@ namespace QuanLyKhachSanATD.MainForm
         {
             PhongMenu myForm = new PhongMenu();
             myForm.Show();
+            
         }
 
         private void DichVuBTN_Click(object sender, EventArgs e)

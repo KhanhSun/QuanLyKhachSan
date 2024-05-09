@@ -71,22 +71,7 @@ namespace QuanLyKhachSanATD.GUI
                 DataSet dn = sun.getData(query);
                 String query2 = "select TienDichVu, TenDichVu from DichVu where TenDichVu = N'" + Service.Text+ "'";
                 DataSet sv = sun.getData(query2);
-                if (dn.Tables.Count > 0 && dn.Tables[0].Rows.Count > 0)
-                {
-                    MessageBox.Show("dn Co du lieu nha");
-                }
-                else
-                {
-                    MessageBox.Show("dn không Có du lieu nha");
-                }
-                if (sv.Tables.Count > 0 && sv.Tables[0].Rows.Count > 0)
-                {
-                    MessageBox.Show("sv Co du lieu nha");
-                }
-                else
-                {
-                    MessageBox.Show("sv không Có du lieu nha");
-                }
+                
                 // hỏi thầy
                 int sum1 = int.Parse(s: dn.Tables[0].Rows[0][0].ToString());
 

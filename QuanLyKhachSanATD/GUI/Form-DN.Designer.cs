@@ -118,7 +118,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(593, 346);
+            ClientSize = new Size(588, 346);
             Controls.Add(ExitBTN);
             Controls.Add(btDN);
             Controls.Add(PassText);
@@ -128,6 +128,7 @@
             Controls.Add(Dangnhap);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -135,6 +136,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng nhập";
             Load += Form_DN_Load;
+            KeyDown += Form_DN_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }

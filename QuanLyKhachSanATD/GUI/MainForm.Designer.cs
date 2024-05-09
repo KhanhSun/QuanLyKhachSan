@@ -85,11 +85,11 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.ActiveCaption;
+            panel2.BackColor = Color.PaleTurquoise;
             panel2.Controls.Add(Logo);
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(247, 177);
+            panel2.Size = new Size(248, 183);
             panel2.TabIndex = 0;
             panel2.Paint += panel2_Paint;
             // 
@@ -97,7 +97,7 @@
             // 
             Logo.AutoSize = true;
             Logo.Font = new Font("Monotype Corsiva", 64.2000046F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            Logo.ForeColor = Color.Green;
+            Logo.ForeColor = SystemColors.ActiveCaptionText;
             Logo.Location = new Point(-3, 20);
             Logo.Name = "Logo";
             Logo.Size = new Size(257, 133);
@@ -112,7 +112,7 @@
             PhongBTN.ForeColor = SystemColors.ButtonFace;
             PhongBTN.Image = (Image)resources.GetObject("PhongBTN.Image");
             PhongBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            PhongBTN.Location = new Point(3, 186);
+            PhongBTN.Location = new Point(3, 192);
             PhongBTN.Name = "PhongBTN";
             PhongBTN.Size = new Size(247, 78);
             PhongBTN.TabIndex = 1;
@@ -129,7 +129,7 @@
             DichVuBTN.ForeColor = SystemColors.ButtonFace;
             DichVuBTN.Image = (Image)resources.GetObject("DichVuBTN.Image");
             DichVuBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            DichVuBTN.Location = new Point(3, 270);
+            DichVuBTN.Location = new Point(3, 276);
             DichVuBTN.Name = "DichVuBTN";
             DichVuBTN.Size = new Size(247, 78);
             DichVuBTN.TabIndex = 2;
@@ -146,7 +146,7 @@
             BepBTN.ForeColor = SystemColors.ButtonFace;
             BepBTN.Image = (Image)resources.GetObject("BepBTN.Image");
             BepBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            BepBTN.Location = new Point(3, 354);
+            BepBTN.Location = new Point(3, 360);
             BepBTN.Name = "BepBTN";
             BepBTN.Size = new Size(247, 78);
             BepBTN.TabIndex = 3;
@@ -163,7 +163,7 @@
             KTBTN.ForeColor = SystemColors.ButtonFace;
             KTBTN.Image = (Image)resources.GetObject("KTBTN.Image");
             KTBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            KTBTN.Location = new Point(3, 438);
+            KTBTN.Location = new Point(3, 444);
             KTBTN.Name = "KTBTN";
             KTBTN.Size = new Size(247, 78);
             KTBTN.TabIndex = 4;
@@ -180,7 +180,7 @@
             KHBTN.ForeColor = SystemColors.ButtonFace;
             KHBTN.Image = (Image)resources.GetObject("KHBTN.Image");
             KHBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            KHBTN.Location = new Point(3, 522);
+            KHBTN.Location = new Point(3, 528);
             KHBTN.Name = "KHBTN";
             KHBTN.Size = new Size(247, 78);
             KHBTN.TabIndex = 5;
@@ -197,7 +197,7 @@
             DTBTN.ForeColor = SystemColors.ButtonFace;
             DTBTN.Image = (Image)resources.GetObject("DTBTN.Image");
             DTBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            DTBTN.Location = new Point(3, 606);
+            DTBTN.Location = new Point(3, 612);
             DTBTN.Name = "DTBTN";
             DTBTN.Size = new Size(247, 78);
             DTBTN.TabIndex = 6;
@@ -214,7 +214,7 @@
             KhoBTN.ForeColor = SystemColors.ButtonFace;
             KhoBTN.Image = (Image)resources.GetObject("KhoBTN.Image");
             KhoBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            KhoBTN.Location = new Point(3, 690);
+            KhoBTN.Location = new Point(3, 696);
             KhoBTN.Name = "KhoBTN";
             KhoBTN.Size = new Size(247, 78);
             KhoBTN.TabIndex = 7;
@@ -231,7 +231,7 @@
             NVBTN.ForeColor = SystemColors.ButtonFace;
             NVBTN.Image = (Image)resources.GetObject("NVBTN.Image");
             NVBTN.ImageAlign = ContentAlignment.MiddleLeft;
-            NVBTN.Location = new Point(3, 774);
+            NVBTN.Location = new Point(3, 780);
             NVBTN.Name = "NVBTN";
             NVBTN.Size = new Size(247, 78);
             NVBTN.TabIndex = 8;
@@ -242,6 +242,7 @@
             // 
             // panel1
             // 
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel1.Controls.Add(pictureBox1);
             panel1.ImeMode = ImeMode.Off;
             panel1.Location = new Point(256, 186);
@@ -275,13 +276,14 @@
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BackColor = Color.MediumSeaGreen;
+            BackColor = Color.Turquoise;
             ClientSize = new Size(1506, 853);
             Controls.Add(UserLa);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;

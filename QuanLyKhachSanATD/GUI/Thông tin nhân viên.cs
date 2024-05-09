@@ -22,10 +22,10 @@ namespace QLNV
         public void connect()
         {
             //Lấy chuỗi kết nối CSDL
-            string strcon = @"Data Source=""; Initial Catalog=QLHOCSINH; User ID=sa;Password = sa";
+            //string strcon = @"Data Source=""; Initial Catalog=QLHOCSINH; User ID=sa;Password = sa";
             try
             {
-                conn = new SqlConnection(strcon);
+                //conn = new SqlConnection(strcon);
                 // Mở kết nối
                 conn.Open();
                 //Ko làm gì thì đóng kết nối lại
