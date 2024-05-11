@@ -16,25 +16,11 @@ namespace QLNV
 {
     public partial class Danh_sách_nhân_viên : Form
     {
-        string connectstring = "Data Source=DESKTOP-I7E37RP;Database=QLKS;Trusted_Connection=True;";
-        SqlConnection connection;
-        SqlCommand command;
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
-        void loaddata()
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "select * form NhanVien";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
-        }
+        ConnectionDB sun = new ConnectionDB();
+        string query = "";
         private void Danh_sách_nhân_viên_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(connectstring);
-            connection.Open();
-            loaddata();
+
         }
         public Danh_sách_nhân_viên()
         {
@@ -78,23 +64,21 @@ namespace QLNV
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new SqlCommand("select * from NhanVien", connection);
-                adapter = new SqlDataAdapter(command);
-                adapter.Fill(table);
-                dataGridView1.DataSource = table;
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            query = "Select * from NhanVien1";
+            DataSet ds = sun.getData(query);
+            dataGridView1.DataSource = ds.Tables[0];
         }
 
         private void Danh_sách_nhân_viên_Load_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            query = " select * from NhanVien1 where MaNV = N'" + textBox1.Text + "'";
+            DataSet ds = sun.getData(query);
+            dataGridView1.DataSource = ds.Tables[0];
 
         }
     }

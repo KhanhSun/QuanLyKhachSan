@@ -128,6 +128,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(240, 34);
             textBox1.TabIndex = 8;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 

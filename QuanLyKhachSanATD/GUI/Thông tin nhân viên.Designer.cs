@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
-            textBox6 = new TextBox();
             textBox5 = new TextBox();
             label8 = new Label();
-            comboBox2 = new ComboBox();
-            label7 = new Label();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
             comboBox1 = new ComboBox();
@@ -50,6 +47,7 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            textBox6 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,8 +56,6 @@
             groupBox1.Controls.Add(textBox6);
             groupBox1.Controls.Add(textBox5);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(comboBox2);
-            groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(textBox4);
             groupBox1.Controls.Add(textBox3);
             groupBox1.Controls.Add(comboBox1);
@@ -80,16 +76,9 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin nhân viên";
             // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(209, 179);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(335, 38);
-            textBox6.TabIndex = 16;
-            // 
             // textBox5
             // 
-            textBox5.Location = new Point(209, 364);
+            textBox5.Location = new Point(207, 318);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(335, 38);
             textBox5.TabIndex = 15;
@@ -102,24 +91,6 @@
             label8.Size = new Size(89, 31);
             label8.TabIndex = 14;
             label8.Text = "Mã NV:";
-            // 
-            // comboBox2
-            // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(209, 319);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(233, 39);
-            comboBox2.TabIndex = 13;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(53, 328);
-            label7.Name = "label7";
-            label7.Size = new Size(129, 31);
-            label7.TabIndex = 12;
-            label7.Text = "Chức danh:";
             // 
             // textBox4
             // 
@@ -143,7 +114,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(166, 39);
             comboBox1.TabIndex = 8;
-            comboBox1.DropDown += comboBox1_DropDown;
             // 
             // textBox2
             // 
@@ -151,6 +121,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(335, 38);
             textBox2.TabIndex = 7;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox1
             // 
@@ -198,7 +169,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(56, 371);
+            label2.Location = new Point(59, 325);
             label2.Name = "label2";
             label2.Size = new Size(118, 31);
             label2.TabIndex = 1;
@@ -273,6 +244,13 @@
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(207, 183);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(335, 38);
+            textBox6.TabIndex = 16;
+            // 
             // Thông_tin_nhân_viên
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -286,6 +264,7 @@
             Controls.Add(groupBox1);
             Name = "Thông_tin_nhân_viên";
             Text = "Thông_tin_nhân_viên";
+            Load += Thông_tin_nhân_viên_Load_1;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -308,12 +287,10 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private Label label7;
-        private ComboBox comboBox2;
         private TextBox textBox5;
         private Label label8;
-        private TextBox textBox6;
         private Button button4;
         private Button button5;
+        private TextBox textBox6;
     }
 }
