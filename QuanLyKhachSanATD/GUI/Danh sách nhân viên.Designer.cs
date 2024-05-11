@@ -128,7 +128,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(240, 34);
             textBox1.TabIndex = 8;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -166,6 +165,7 @@
             Controls.Add(button1);
             Name = "Danh_sách_nhân_viên";
             Text = "Danh_sách_nhân_viên";
+            Load += Danh_sách_nhân_viên_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);

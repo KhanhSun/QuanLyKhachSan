@@ -16,10 +16,7 @@ namespace QLNV
 {
     public partial class Danh_sách_nhân_viên : Form
     {
-        string connectstring = string.Empty;
-
-        ConnectionDB sun = new ConnectionDB();
-        string query = "";
+        string connectstring = "Data Source=DESKTOP-I7E37RP;Database=QLKS;Trusted_Connection=True;";
         SqlConnection connection;
         SqlCommand command;
         SqlDataAdapter adapter = new SqlDataAdapter();
@@ -27,7 +24,7 @@ namespace QLNV
         void loaddata()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * form QLNhanVien";
+            command.CommandText = "select * form NhanVien";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -43,7 +40,7 @@ namespace QLNV
         {
             InitializeComponent();
         }
-        
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -84,15 +81,21 @@ namespace QLNV
             try
             {
                 connection.Open();
-                command = new SqlCommand("select * from QLNhanVien", connection);
+                command = new SqlCommand("select * from NhanVien", connection);
                 adapter = new SqlDataAdapter(command);
                 adapter.Fill(table);
                 dataGridView1.DataSource = table;
                 connection.Close();
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Danh_sách_nhân_viên_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
