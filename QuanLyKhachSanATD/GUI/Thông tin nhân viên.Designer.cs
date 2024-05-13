@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            textBox6 = new TextBox();
             textBox5 = new TextBox();
             label8 = new Label();
             textBox4 = new TextBox();
@@ -47,7 +48,6 @@
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
-            textBox6 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,6 +75,13 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin nhân viên";
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(207, 183);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(335, 38);
+            textBox6.TabIndex = 16;
             // 
             // textBox5
             // 
@@ -171,9 +178,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(59, 325);
             label2.Name = "label2";
-            label2.Size = new Size(118, 31);
+            label2.Size = new Size(75, 31);
             label2.TabIndex = 1;
-            label2.Text = "Số CMND:";
+            label2.Text = "CCCD:";
             // 
             // label1
             // 
@@ -243,13 +250,6 @@
             button5.Text = "Khởi tạo";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(207, 183);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(335, 38);
-            textBox6.TabIndex = 16;
             // 
             // Thông_tin_nhân_viên
             // 

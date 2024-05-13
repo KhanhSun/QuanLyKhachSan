@@ -35,7 +35,8 @@ namespace QLNV
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            comboBox1.Text = "";
+            comboBox1.Focus();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -85,6 +86,11 @@ namespace QLNV
         }
 
         private void Quyền_Truy_Cập_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

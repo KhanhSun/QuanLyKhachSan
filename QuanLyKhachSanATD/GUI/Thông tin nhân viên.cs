@@ -66,7 +66,7 @@ namespace QLNV
         {
 
         }
-        string MaNV, TenNV, GioiTinh, Email, DiaChi, ChucDanh;
+        string MaNV, TenNV, GioiTinh, Email, DiaChi;
         int SDT, CCCD;
         private void button1_Click(object sender, EventArgs e)
         {
@@ -80,7 +80,7 @@ namespace QLNV
             try
             {
                 conn.Open();
-                string str = "insert into NhanVien VALUES('" + MaNV + "',N'" + TenNV + "'," + GioiTinh + "," + SDT + ",N'" + Email + "'," + CCCD + ",N'" + DiaChi + "',N'" + ChucDanh + "')";
+                string str = "insert into NhanVien VALUES('" + MaNV + "',N'" + TenNV + "'," + GioiTinh + "," + SDT + ",N'" + Email + "'," + CCCD + ",N'" + DiaChi + "')";
                 //cmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("Thêm dữ liệu thành công!");
@@ -106,7 +106,7 @@ namespace QLNV
         private void button4_Click(object sender, EventArgs e)
         {
             command.Connection.CreateCommand();
-            command.CommandText = "update form NhanVien where TenNV = '" + textBox2.Text + "',GioiTinh ='" + comboBox1.Text + "',Email='" + textBox3.Text + "',SDT = " + textBox4.Text + ",DiaChi = '" + textBox5.Text + "',SoCMND = " + textBox6.Text + "";
+            command.CommandText = "update form NhanVien where TenNV = '" + textBox2.Text + "',GioiTinh ='" + comboBox1.Text + "',Email='" + textBox3.Text + "',SDT = " + textBox4.Text + ",DiaChi = '" + textBox5.Text + "',CCCD = " + textBox6.Text + "";
             command.ExecuteNonQuery();
         }
 
@@ -123,7 +123,7 @@ namespace QLNV
 
         private void Thông_tin_nhân_viên_Load_1(object sender, EventArgs e)
         {
-            query = "select distinct GioiTinh from NhanVien1";
+            query = "select distinct GioiTinh from NhanVien";
             setcombobox(query, comboBox1);
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
