@@ -21,7 +21,8 @@ namespace QuanLyKhachSanATD.GUI
         {
             LoaiPhong dp = new LoaiPhong ();
             this.Close ();
-            dp.Show();
+            dp.ShowDialog();
+
         }
 
         private void button4_Click(object sender, EventArgs e)

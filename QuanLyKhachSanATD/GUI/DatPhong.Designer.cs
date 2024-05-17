@@ -160,7 +160,7 @@
             // dob
             // 
             dob.CalendarFont = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dob.CustomFormat = "yyyy-MM-dd";
+            dob.CustomFormat = "MM/dd/yyyy";
             dob.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dob.Format = DateTimePickerFormat.Custom;
             dob.Location = new Point(34, 491);
@@ -213,7 +213,7 @@
             // checkinday
             // 
             checkinday.CalendarFont = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkinday.CustomFormat = "yyyy-MM-dd";
+            checkinday.CustomFormat = "MM/dd/yyyy";
             checkinday.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             checkinday.Format = DateTimePickerFormat.Custom;
             checkinday.Location = new Point(396, 303);

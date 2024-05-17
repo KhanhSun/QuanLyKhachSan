@@ -138,8 +138,8 @@
             // paydtp
             // 
             paydtp.CalendarMonthBackground = Color.DarkOrange;
-            paydtp.CustomFormat = "yyyy-MM-dd";
-            paydtp.Format = DateTimePickerFormat.Short;
+            paydtp.CustomFormat = "MM/dd/yyyy";
+            paydtp.Format = DateTimePickerFormat.Custom;
             paydtp.Location = new Point(544, 651);
             paydtp.Name = "paydtp";
             paydtp.Size = new Size(250, 27);

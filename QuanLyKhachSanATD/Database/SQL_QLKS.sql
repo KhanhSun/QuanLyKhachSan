@@ -224,3 +224,5 @@ VALUES
 
 update LoaiPhong set TinhTrangPhong ='No'
 select DatPhong.cid, DatPhong.cname, DatPhong.mobile, DatPhong.quoctich, DatPhong.gioitinh, DatPhong.ngaysinh, DatPhong.maDN, DatPhong.diachi, DatPhong.checkin,DatPhong.rservice, LoaiPhong.MaPhong,  LoaiPhong.TenLoaiPhong,DatPhong.allcost from DatPhong inner join LoaiPhong on DatPhong.roomid = LoaiPhong.roomid where checkout = 'No';
+select cname from DatPhong where chekout between '5/2/2024' and '5/3/2024'
+Select cname as 'Customer Name',maDN as 'Id',checkin as 'Check in',chekout as 'Check out',roomid as 'Room Number',allcost as 'Paid' from DatPhong where checkout = 'Yes'

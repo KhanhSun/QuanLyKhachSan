@@ -24,6 +24,7 @@ namespace QuanLyKhachSanATD.MainForm
             InitializeComponent();
             checkquyen = quyen;
             tenuser = tentk;
+            label1.Text = "User: "+tenuser.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,13 +45,13 @@ namespace QuanLyKhachSanATD.MainForm
         {
             PhongMenu myForm = new PhongMenu();
             myForm.Show();
-            
+
         }
 
         private void DichVuBTN_Click(object sender, EventArgs e)
         {
             DichVu dp = new DichVu();
-            dp.Show();
+            dp.ShowDialog();
         }
 
         private void BepBTN_Click(object sender, EventArgs e)
@@ -65,19 +66,20 @@ namespace QuanLyKhachSanATD.MainForm
 
         private void KHBTN_Click(object sender, EventArgs e)
         {
-            Form_QLKH kh= new Form_QLKH();
-            kh.Show();
+            Form_QLKH kh = new Form_QLKH();
+            kh.ShowDialog();
         }
 
         private void DTBTN_Click(object sender, EventArgs e)
         {
-
+            DoanhThu dt = new DoanhThu();
+            dt.ShowDialog();
         }
 
         private void KhoBTN_Click(object sender, EventArgs e)
         {
             Kho dp = new Kho();
-            dp.Show();
+            dp.ShowDialog();
         }
         void PhanQuyen()
         {
@@ -88,7 +90,8 @@ namespace QuanLyKhachSanATD.MainForm
         }
         private void NVBTN_Click(object sender, EventArgs e)
         {
-
+            Chức_năng dp = new Chức_năng();
+            dp.ShowDialog();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -104,6 +107,11 @@ namespace QuanLyKhachSanATD.MainForm
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
