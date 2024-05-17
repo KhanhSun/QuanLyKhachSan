@@ -165,6 +165,7 @@
             Controls.Add(button1);
             Name = "Danh_sách_nhân_viên";
             Text = "Danh_sách_nhân_viên";
+            Load += Danh_sách_nhân_viên_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);

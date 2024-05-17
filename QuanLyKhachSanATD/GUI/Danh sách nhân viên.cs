@@ -16,34 +16,17 @@ namespace QLNV
 {
     public partial class Danh_sách_nhân_viên : Form
     {
-        string connectstring = string.Empty;
-
         ConnectionDB sun = new ConnectionDB();
         string query = "";
-        SqlConnection connection;
-        SqlCommand command;
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
-        void loaddata()
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "select * form QLNhanVien";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
-        }
         private void Danh_sách_nhân_viên_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(connectstring);
-            connection.Open();
-            loaddata();
+
         }
         public Danh_sách_nhân_viên()
         {
             InitializeComponent();
         }
-        
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -81,18 +64,22 @@ namespace QLNV
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            try
-            {
-                connection.Open();
-                command = new SqlCommand("select * from QLNhanVien", connection);
-                adapter = new SqlDataAdapter(command);
-                adapter.Fill(table);
-                dataGridView1.DataSource = table;
-                connection.Close();
-            }
-            catch(Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
+            query = "Select * from NhanVien1";
+            DataSet ds = sun.getData(query);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void Danh_sách_nhân_viên_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            query = " select * from NhanVien1 where MaNV = N'" + textBox1.Text + "'";
+            DataSet ds = sun.getData(query);
+            dataGridView1.DataSource = ds.Tables[0];
+
         }
     }
 }

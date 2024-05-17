@@ -187,13 +187,16 @@
             // 
             // listBox2
             // 
+            listBox2.AccessibleRole = AccessibleRole.None;
             listBox2.BackColor = Color.YellowGreen;
+            listBox2.ForeColor = Color.YellowGreen;
             listBox2.FormattingEnabled = true;
             listBox2.ItemHeight = 28;
             listBox2.Location = new Point(22, 53);
             listBox2.Name = "listBox2";
             listBox2.Size = new Size(252, 284);
             listBox2.TabIndex = 0;
+            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
             // 
             // Quyền_Truy_Cập
             // 
