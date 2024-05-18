@@ -1,5 +1,5 @@
-﻿using QLPhong_QLKyThuat.BUS;
-using QLPhong_QLKyThuat.DTO;
+﻿//using QLPhong_QLKyThuat.BUS;
+//using QLPhong_QLKyThuat.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +14,12 @@ namespace QLPhong_QLKyThuat
 {
     public partial class frmMain : Form
     {
-        QLP_BUS QLP_BUS;
-        QLP_DTO QLP_DTO;
-        TKP_BUS TKP_BUS;
-        TKP_DTO TKP_DTO;
-        QLKT_BUS QLKT_BUS; 
-        QLKT_DTO QLKT_DTO;
+        //QLP_BUS QLP_BUS;
+        //QLP_DTO QLP_DTO;
+        //TKP_BUS TKP_BUS;
+        //TKP_DTO TKP_DTO;
+        //QLKT_BUS QLKT_BUS; 
+        //QLKT_DTO QLKT_DTO;
         public frmMain()
         {
             InitializeComponent();
@@ -27,15 +27,15 @@ namespace QLPhong_QLKyThuat
 
         private void getData()
         {
-            QLP_DTO.SoPhong = txtSoPhong_QLP.Text;
-            QLP_DTO.TinhTrangPhong = txtTinhTrangPhong_QLP.Text;
-            QLP_DTO.LoaiPhong = txtLoaiPhong_QLP.Text;
-            QLP_DTO.Giuong = txtGiuong_QLP.Text;
-            QLP_DTO.GiaTien = float.Parse(txtGiaTien_QLP.Text);
+            //QLP_DTO.SoPhong = txtSoPhong_QLP.Text;
+            //QLP_DTO.TinhTrangPhong = txtTinhTrangPhong_QLP.Text;
+            //QLP_DTO.LoaiPhong = txtLoaiPhong_QLP.Text;
+            //QLP_DTO.Giuong = txtGiuong_QLP.Text;
+            //QLP_DTO.GiaTien = float.Parse(txtGiaTien_QLP.Text);
             //Gán QLP_DTO cho info trong QLP_BUS
-            QLP_BUS.info = QLP_DTO;
-            TKP_BUS.info = TKP_DTO;
-            QLKT_BUS.info = QLKT_DTO;
+            //QLP_BUS.info = QLP_DTO;
+            //TKP_BUS.info = TKP_DTO;
+            //QLKT_BUS.info = QLKT_DTO;
         }
 
         private void DinhDangLuoi_QLP()
@@ -84,55 +84,55 @@ namespace QLPhong_QLKyThuat
         private void frmMain_Load(object sender, EventArgs e)
         {
             //Thiết lập chuỗi kết nối
-            DataProvider.connectionString = @"Data Source=LAPTOP-12NN13S8;Initial Catalog=QLKS;Integrated Security=True;";
-            DataProvider provider = new DataProvider();
-            provider.connect();
+            //DataProvider.connectionString = @"Data Source=LAPTOP-12NN13S8;Initial Catalog=QLKS;Integrated Security=True;";
+            //DataProvider provider = new DataProvider();
+            //provider.connect();
             //Từ câu lệnh này conn sẽ được thiết lặp và có thể gọi DataProvider.conn;
-            QLP_BUS = new QLP_BUS();
-            QLP_DTO = new QLP_DTO();
-            TKP_BUS = new TKP_BUS();
-            TKP_DTO = new TKP_DTO();
-            QLKT_BUS = new QLKT_BUS();
-            QLKT_DTO = new QLKT_DTO();
+            //QLP_BUS = new QLP_BUS();
+            //QLP_DTO = new QLP_DTO();
+            //TKP_BUS = new TKP_BUS();
+            //TKP_DTO = new TKP_DTO();
+            //QLKT_BUS = new QLKT_BUS();
+            //QLKT_DTO = new QLKT_DTO();
 
-            dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
+            //dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
             //Định dạng lưới
             DinhDangLuoi_QLP();
 
-            dataGridView_TKP.DataSource = TKP_BUS.getDSPhong();
+            //dataGridView_TKP.DataSource = TKP_BUS.getDSPhong();
             //Định dạng lưới
             DinhDangLuoi_TKP();
 
-            dataGridView_QLKT.DataSource = QLKT_BUS.getDSPhong();
+            //dataGridView_QLKT.DataSource = QLKT_BUS.getDSPhong();
             //Định dạng lưới
             DinhDangLuoi_QLKT();
         }
         private void CapNhatDuLieu()
         {
-            dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
-            dataGridView_TKP.DataSource = TKP_BUS.getDSPhong();
-            dataGridView_QLKT.DataSource = QLKT_BUS.getDSPhong();
+            //dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
+            //dataGridView_TKP.DataSource = TKP_BUS.getDSPhong();
+            //dataGridView_QLKT.DataSource = QLKT_BUS.getDSPhong();
         }
         private void btnThem_QLP_Click(object sender, EventArgs e)
         {
-            QLP_BUS.info = new QLP_DTO();
-            QLP_BUS.info.SoPhong = txtSoPhong_QLP.Text;
-            QLP_BUS.info.TinhTrangPhong = txtTinhTrangPhong_QLP.Text;
-            QLP_BUS.info.LoaiPhong = txtLoaiPhong_QLP.Text;
-            QLP_BUS.info.Giuong = txtGiuong_QLP.Text;
-            QLP_BUS.info.GiaTien = float.Parse(txtGiaTien_QLP.Text);
+            //QLP_BUS.info = new QLP_DTO();
+            //QLP_BUS.info.SoPhong = txtSoPhong_QLP.Text;
+            //QLP_BUS.info.TinhTrangPhong = txtTinhTrangPhong_QLP.Text;
+            //QLP_BUS.info.LoaiPhong = txtLoaiPhong_QLP.Text;
+            //QLP_BUS.info.Giuong = txtGiuong_QLP.Text;
+            //QLP_BUS.info.GiaTien = float.Parse(txtGiaTien_QLP.Text);
 
             float GiaTien_QLP;
             if (float.TryParse(txtGiaTien_QLP.Text, out GiaTien_QLP))
             {
-                QLP_BUS.info.GiaTien = GiaTien_QLP;
+                //QLP_BUS.info.GiaTien = GiaTien_QLP;
             }
             else
             {
                 // Xử lý trường hợp chuỗi đầu vào không phải là số hợp lệ
                 MessageBox.Show("Giá trị không hợp lệ. Vui lòng nhập số.");
             }
-            if (QLP_BUS.insert())
+            //if (QLP_BUS.insert())
             {
                 // Cập nhật lại dữ liệu trên DataGridView
                 CapNhatDuLieu();
@@ -145,7 +145,7 @@ namespace QLPhong_QLKyThuat
                 txtGiuong_QLP.Clear();
                 txtGiaTien_QLP.Clear();
             }
-            else
+            //else
             {
                 // Thêm dữ liệu thất bại
                 MessageBox.Show("Thêm dữ liệu thất bại");
@@ -154,24 +154,24 @@ namespace QLPhong_QLKyThuat
 
         private void btnThem_QLKT_Click(object sender, EventArgs e)
         {
-            QLKT_BUS.info = new QLKT_DTO();
-            QLKT_BUS.info.MaPhong = txtSoPhong_QLKT.Text;
-            QLKT_BUS.info.MaNV = int.Parse(txtTinhTrangPhong_QLKT.Text);
-            QLKT_BUS.info.NgayBaoTri = int.Parse();
-            QLKT_BUS.info.ThongTinBaoTri = txtMoTa_QLKT.Text;
-            QLKT_BUS.info.TienPhuCap = float.Parse(txtGiaTien_QLKT.Text);
+            //QLKT_BUS.info = new QLKT_DTO();
+            //QLKT_BUS.info.MaPhong = txtSoPhong_QLKT.Text;
+            //QLKT_BUS.info.MaNV = int.Parse(txtTinhTrangPhong_QLKT.Text);
+            //QLKT_BUS.info.NgayBaoTri = int.Parse();
+            //QLKT_BUS.info.ThongTinBaoTri = txtMoTa_QLKT.Text;
+            //QLKT_BUS.info.TienPhuCap = float.Parse(txtGiaTien_QLKT.Text);
 
             float GiaTien_QLKT;
             if (float.TryParse(txtGiaTien_QLKT.Text, out GiaTien_QLKT))
             {
-                QLKT_BUS.info.TienPhuCap = GiaTien_QLKT;
+                //QLKT_BUS.info.TienPhuCap = GiaTien_QLKT;
             }
             else
             {
                 // Xử lý trường hợp chuỗi đầu vào không phải là số hợp lệ
                 MessageBox.Show("Giá trị không hợp lệ. Vui lòng nhập số.");
             }
-            if (QLKT_BUS.insert())
+            //if (QLKT_BUS.insert())
             {
                 // Cập nhật lại dữ liệu trên DataGridView
                 CapNhatDuLieu();
@@ -183,7 +183,7 @@ namespace QLPhong_QLKyThuat
                 txtMoTa_QLKT.Clear();
                 txtGiaTien_QLKT.Clear();
             }
-            else
+            //else
             {
                 // Thêm dữ liệu thất bại
                 MessageBox.Show("Thêm dữ liệu thất bại");
@@ -198,20 +198,20 @@ namespace QLPhong_QLKyThuat
         private void btnSua_QLP_Click(object sender, EventArgs e)
         {
             getData();
-            if (QLP_BUS.insert() == true)
+            //if (QLP_BUS.insert() == true)
             {
                 //Load lai danh sach phong len luoi
-                dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
+                //dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
                 MessageBox.Show("Thêm thành công");
             }
         }
         private void btnCapNhat_QLKT_Click(object sender, EventArgs e)
         {
             getData();
-            if (QLKT_BUS.insert() == true)
+            //if (QLKT_BUS.insert() == true)
             {
                 //Load lai danh sach phong len luoi
-                dataGridView_QLKT.DataSource = QLKT_BUS.getDSPhong();
+                //dataGridView_QLKT.DataSource = QLKT_BUS.getDSPhong();
                 MessageBox.Show("Thêm thành công");
             }
         }
@@ -219,10 +219,10 @@ namespace QLPhong_QLKyThuat
         private void btnCapNhat_TKP_Click(object sender, EventArgs e)
         {
             getData();
-            if (TKP_BUS.update() == true)
+            //if (TKP_BUS.update() == true)
             {
                 //Load lai danh sach phong len luoi
-                dataGridView_TKP.DataSource = TKP_BUS.getDSPhong();
+                //dataGridView_TKP.DataSource = TKP_BUS.getDSPhong();
                 MessageBox.Show("Sửa thành công");
             }
         }
@@ -230,10 +230,10 @@ namespace QLPhong_QLKyThuat
         private void btnXoa_QLP_Click(object sender, EventArgs e)
         {
             getData();
-            if (QLP_BUS.delete() == true)
+            //if (QLP_BUS.delete() == true)
             {
                 //Load lai danh sach phong len luoi
-                dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
+                //dataGridView_QLP.DataSource = QLP_BUS.getDSPhong();
                 MessageBox.Show("Xóa thành công");
             }
         }

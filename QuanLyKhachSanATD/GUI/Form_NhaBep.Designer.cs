@@ -62,6 +62,7 @@
             Controls.Add(label1);
             Name = "Form_NhaBep";
             Text = "Form_NhaBep";
+            Load += Form_NhaBep_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
