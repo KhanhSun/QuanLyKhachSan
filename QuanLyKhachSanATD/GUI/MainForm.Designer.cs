@@ -44,6 +44,7 @@
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             UserLa = new Label();
+            label1 = new Label();
             flowLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -273,11 +274,22 @@
             UserLa.TextAlign = ContentAlignment.MiddleCenter;
             UserLa.Click += UserLa_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(1167, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 41);
+            label1.TabIndex = 4;
+            label1.Click += label1_Click;
+            // 
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.Turquoise;
             ClientSize = new Size(1506, 853);
+            Controls.Add(label1);
             Controls.Add(UserLa);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel1);
@@ -315,5 +327,6 @@
         private Button NVBTN;
         private PictureBox pictureBox1;
         private Label UserLa;
+        private Label label1;
     }
 }
