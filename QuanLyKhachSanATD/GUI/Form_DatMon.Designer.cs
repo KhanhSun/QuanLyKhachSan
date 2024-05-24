@@ -128,7 +128,6 @@
             // 
             txtMaMon.Location = new Point(481, 93);
             txtMaMon.Name = "txtMaMon";
-            txtMaMon.ReadOnly = true;
             txtMaMon.Size = new Size(186, 27);
             txtMaMon.TabIndex = 8;
             // 
@@ -189,7 +188,6 @@
             // 
             txtThanhTien.Location = new Point(481, 132);
             txtThanhTien.Name = "txtThanhTien";
-            txtThanhTien.ReadOnly = true;
             txtThanhTien.Size = new Size(186, 27);
             txtThanhTien.TabIndex = 14;
             // 
